@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+import sys
+import csv
+
+
+LABEL_LEN = len('timestamp, destination_port,destination_ip,data_scrubbed\n')
+
+class Packet:
+    def __init__(self, timestamp, dest_port, dest_ip, data):
+        self.timestamp = 0
+        self.dest_port = 0
+        self.dest_ip = '0.0.0.0'
+        self.data = ''
+
+if len(sys.argv) != 2:
+    print('\nUsage:packet_parser [csv file]\n')
+    sys.exit()
+
+with open(sys.argv[1], newline='') as csvfile:
+    dialect = csv.Sniffer().sniff(csvfile.read(len(sys.argv)))
+    csvfile.seek(LABEL_LEN) # remove the labels, just read data
+    reader = csv.reader(csvfile, dialect)
+    rows = [row for row in reader] # all the rows
+    # some ugly ass code:
+    for row in rows:
+        packet = row[0].split(',')
+        packets = [Packet(row[0].split(',')[0], row[0].split(',')[1], row[0].split(',')[2], row[0].split(',')[3]) for row in rows]
+
+
