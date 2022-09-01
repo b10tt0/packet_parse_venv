@@ -7,8 +7,11 @@ takes scrubbed data from .csv file and puts into a (soon to be) queryable class
 command line tool for grabbing port info off speedguide <-- currently gets your ip blocked unless done through tor lol
 
 `source bin/activate`
+
 `apt install python3-bs4`
+
 `pip3 install requests-tor`
+
 `pip3 install html2text`
 
 - install [tor](https://gist.github.com/DusanMadar/8d11026b7ce0bce6a67f7dd87b999f6b).
