@@ -20,3 +20,8 @@ command line tool for grabbing port info off speedguide <-- currently gets your 
 __NOTE:__
 tor makes this shit nightmarishly slow, and it does occasionally bug out. 
 looking more into this soon...
+
+### Using speedguide:
+
+`Usage: speedguide [port]`
+
