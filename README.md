@@ -23,5 +23,5 @@ looking more into this soon...
 
 ### Using speedguide:
 
-`Usage: speedguide [port]`
+`speedguide [port]`
 
