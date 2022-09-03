@@ -7,14 +7,15 @@ from bs4 import BeautifulSoup
 import html2text
 
 
-if len(sys.argv) != 2:
-    print('\nUsage:speedguide [port]\n')
+if len(sys.argv) != 3:
+    print('\nUsage:speedguide [port] [passphrase]\n')
     sys.exit()
 
 port = sys.argv[1] # set this var so we can check for correct input later
+passphrase = sys.argv[2]
 url = 'https://www.speedguide.net/port.php?port=' + str(port)
 # Don't forget to set your password
-rt = RequestsTor(tor_ports=(9000,9001,9002,9003), tor_cport=(9151), password=None,
+rt = RequestsTor(tor_ports=(9000,9001,9002,9003), tor_cport=(9151), password=passphrase,
                 autochange_id=5, threads=8, verbose=True)
 """
 # test
