@@ -15,7 +15,7 @@ command line tool for grabbing port info off speedguide <-- currently gets your 
 `pip3 install html2text`
 
 - install [tor](https://gist.github.com/DusanMadar/8d11026b7ce0bce6a67f7dd87b999f6b).
-- in `/etc/tor/torrc` uncommnet / set `ControlPort 9051`. the rest is explained in: setup ["Advanced usage"](https://pypi.org/project/requests-tor/) for `tor-request`
+- in `/etc/tor/torrc` uncommnet / set `ControlPort 9151`. the rest is explained in: setup ["Advanced usage"](https://pypi.org/project/requests-tor/) for `tor-request`
 
 __NOTE:__
 tor makes this shit nightmarishly slow, and it does occasionally bug out. 
